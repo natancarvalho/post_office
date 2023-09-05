@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home_post_office():
-    return render_template("index.html")
+    return render_template("main.html")
 
 @app.route("/login", methods = ["POST"])
 def login():
@@ -13,7 +13,7 @@ def login():
     if request.method == "POST":
         email = request.form.get("email")
         password = request.form.get("password")
-        return render_template("teste.html")  
+        return render_template("opcoes.html")  
         
        
 

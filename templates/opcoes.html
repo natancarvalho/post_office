@@ -1,12 +1,29 @@
 <html>
-  <body>
-    
-    <h1>Opções da sua AgendECA</h1>
-    <form method="POST" action="/opcoes">
-      <p><input type="submit" name = "botao" value="adicionar"></p>
-      <p><input type="submit" name = "botao" value="remover"></p>
-      <p><input type="submit" name = "botao" value="editar"></p>
-      <p><input type="submit" name = "botao" value="sair"></p>
-    </form>
-  </body>
+<body>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='opcoes.css') }}">
+  <form method="POST" action="/opcoes">
+    <div>
+      <label for="data">Data:</label>
+      <br>
+      <input type="text" id="data" placeholder="dd/mm/aa" name="data" size="6">
+      <br>
+      <label for="destinatario">Destinatário:</label>
+      <br>
+      <input type="text" id="destinatario" name="destinatario">
+      <br>
+      <label for="remetente">Remetente:</label>
+      <br>
+      <input type="text" id="remetente" name="remetente">
+      <br>
+      <br>
+      <br>
+      <label for="freeform">Insira sua mensagem:</label>
+      <br>
+      <textarea id="freeform" name="freeform" rows="6" cols="50"></textarea>
+      <br>
+      <br>
+      <button type="submit" value="opcoes">Enviar</button>
+    </div>
+  </form>
+</body>
 </html>
