@@ -1,0 +1,43 @@
+body{
+	background-image: linear-gradient(315deg, #0C090A, #3A3B3C);
+}
+div {
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	border-radius: 14px;
+	color: black
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+input {
+	background-color: #DCDCDC;
+				
+	outline: none;
+	font-size: 20px;
+	border: none;
+	color: #383838;
+	border-radius: 6px;
+}
+textarea{
+    background-color: #DCDCDC;
+	outline: none;
+	font-size: 20px;
+	border: none;
+	color: #383838;
+	border-radius: 6px;
+}
+button{
+    border: none;
+	padding: 10px;
+	background-color: #70dee2;
+	border-radius: 6px
+}
+button:hover {
+	background-color: #5facc4;
+}
