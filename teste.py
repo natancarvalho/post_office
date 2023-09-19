@@ -1,8 +1,18 @@
-with open('login.txt') as f:
-    mylist = [line.rstrip('\n') for line in f]
+import post_office_lib
 
-print(mylist)
+data = "17/06/1992"
+quebra_linha = "\n"
+destinatario = "oi"
+mensagem = "tudo bem ?"
+remetente = "sdasdasdasd"
+maior = ">"
+menor = "<"
 
-for i in mylist:
-    login = i.split(',')
-    print (login)
+
+carta =  "<" + data + ">" +  quebra_linha + "<" + destinatario + ">" + quebra_linha +  "<" + mensagem + ">" + quebra_linha + "<" + remetente + ">" 
+print (carta)
+
+post_office_lib.escrever_carta(destinatario, data, carta)   
+
+
+
