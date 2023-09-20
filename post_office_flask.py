@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
 import post_office_lib
 
 
@@ -49,10 +47,14 @@ def opcoes():
             mensagem = request.form.get("freeform")
             remetente = request.form.get("rementente")
 
-            carta = "<" + data + ">" +  quebra_linha + "<" + destinatario + ">"  + quebra_linha + "<" + remetente + ">" 
+            carta =  str("<") + str(data) + str(">") + str("\n") + str("<") + str(destinatario) + str(">") + str("\n") + str("<") + str(mensagem) + str(">") + str("\n") + str("<") + str(remetente) + str(">")
 
             print(carta)
 
-            post_office_lib.escrever_carta(destinatario, data, carta)   
+            post_office_lib.escrever_carta(destinatario, data, carta)
+            post_office_lib.gerar_pdf(carta, destinatario, data)
 
             return render_template("opcoes.html")
+        
+#app.debug = True
+app.run()
